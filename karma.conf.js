@@ -5,12 +5,12 @@ module.exports = function (config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: './',
+    basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['mocha'],
 
 
     // list of files / patterns to load in the browser
@@ -23,9 +23,12 @@ module.exports = function (config) {
       // our app code
       'client/**/*.js',
 
+      // files to exclude from app code path
+      // '!client/bower_components/**/*',
+
       // our spec files
       'node_modules/expect.js/index.js',
-      'test/client/**/*.js'
+      'test/client/*.js'
     ],
 
 
